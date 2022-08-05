@@ -3,14 +3,13 @@ import React, { useState } from "react";
 
 const FoodItem = (props) => {
   const { title, price } = props.FoodItem;
-  const [clicked, setClicked] = useState("");
 
   return (
     <div
       className="foodItem-container"
       onClick={() => {
-        // setClicked("clicked");
-        return props.selectFoodItem(props.FoodItem);
+        props.selectFoodItem(props.FoodItem);
+        props.generateComment(title);
       }}
     >
       <h3 className={`food-display`}>
