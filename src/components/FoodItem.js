@@ -8,8 +8,10 @@ const FoodItem = (props) => {
     <div
       className="foodItem-container"
       onClick={() => {
+        if (props.clicked.length < 3) {
         props.selectFoodItem(props.FoodItem);
         props.generateComment(title);
+        }
       }}
     >
       <h3 className={`food-display`}>

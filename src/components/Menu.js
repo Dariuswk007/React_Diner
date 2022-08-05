@@ -25,6 +25,7 @@ const Menu = (props) => {
           selectFoodItem={props.selectFoodItem}
           FoodItem={item}
           generateComment={props.generateComment}
+          clicked={props.clicked}
         />
       );
     });
